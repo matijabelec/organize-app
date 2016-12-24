@@ -1,0 +1,189 @@
+html, body{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 100%;
+  background-color: #eee;
+}
+a{
+  color: #2a2d34;
+}
+.app{
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+/*body, .page-header{ background-color: #0a0d14; color: #e8e8e8; }
+.page-content{ background-color: #2a2d34; color: #e8e8e8; display: block; position: relative; margin-top: 50px; margin-bottom: 126px; display: block; position: relative; height: 100%; }
+
+.page-header{ display: block; position: fixed; top: 0; left: 0; right: 0; height: 50px; z-index: 2311; }
+.page-header .page-id{ display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: #f26430; font-size: 23px; padding: 12px; text-decoration: none; }
+
+.page-footer{ display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: -1; }
+.page-footer a{ color: #e8e8e8; }
+
+.page-nav{ display: block; float: right; }
+.page-nav ul{ display: block; list-style: none; padding: 0; margin: 0; }
+.page-nav ul li{ display: inline-block; padding: 0; margin: 0; }
+.page-nav ul li a{
+  display: block; padding: 16px; margin: 0; text-decoration: none; color: #009ddc;
+  -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out;
+}
+.page-nav ul li a:hover{ background-color: #009ddc; color: #2a2d34; }
+
+.page-section{ display: block; position: relative; min-height: 100%; }
+.page-section:not(:last-child){ margin-bottom: 16px; }
+
+.content{ display: block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 960px; max-width: 100%; margin: auto; padding: 16px; }
+*/
+
+.page-id{
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #f26430;
+  font-size: 22px;
+  padding: 7px 0;
+  text-decoration: none;
+}
+
+.primary-action{
+  color: #f26430;
+}
+
+.content form{
+  display: block;
+}
+.content form label{
+  display: block;
+  margin-bottom: 16px;
+}
+.content form label>span{
+  display:block;
+  margin-bottom: 6px;
+}
+.content form input:not([type="submit"]),
+.content form textarea{
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin: 0;
+  border: none;
+}
+.content form textarea{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 74px;
+}
+
+
+.act-toggle-page-nav{
+  border: none;
+  color: #ddd;
+  background: none;
+  margin: 0;
+  padding: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  float: right;
+}
+.act-toggle-page-nav i{
+  vertical-align: middle;
+}
+.act-toggle-page-nav:hover{
+  background-color: #ddd;
+  color: #222;
+}
+
+.page-section,
+.container{
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto;
+}
+.container{
+  padding: 8px;
+}
+.page-section::after,
+.container::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.w720{
+  width: 720px;
+}
+.w960{
+  width: 720px;
+}
+
+.page-nav{
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+.page-nav .container{
+  background-color: rgba(50, 50, 50, 0.9);
+}
+.page-nav.preview{
+  display: block;
+}
+.page-nav>ul{
+  list-style: none;
+}
+.page-nav>ul>li{
+  display: inline-block;
+}
+.page-nav>ul>li a{
+  display: block;
+  padding: 16px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #ddd;
+}
+.page-nav>ul>li a:hover{
+  color: #f26430;
+}
+
+.wrapper{
+  display: table-cell;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.wrapper-half{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.navbar{
+  margin-top: 64px;
+  display: block;
+  position: relative;
+}
+
+.page-section{
+  margin-bottom: 16px;
+}
+.page-section .container{
+  /*background-color: #60c489;*/
+}
