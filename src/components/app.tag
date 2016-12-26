@@ -1,31 +1,33 @@
-<app>
-  <header>
-  </header>
-
-  <nav data-is={ nav_view }></nav>
-  <main data-is={ main_view }></main>
-
-  <footer>
-    <p>with <i class="material-icons">favorite</i> by matijabelec</p>
-  </footer>
+<a-app>
+  <div class="e-background"></div>
+  <a-navigation links={ links }></a-navigation>
+  <div class="e-overlay"></div>
+  <div class="e-main-wrapper">
+    <a-header></a-header>
+    <main data-is={ content }></main>
+    <a-footer></a-footer>
+  </div>
 
   <script>
     var self = this
-    this.main_view = 'login-form'
-    this.nav_view = 'nav-public'
+    this.content = 'a-404-index'
+    this.links = [
+      { label: 'home', href: '/#!home' },
+      { label: 'projects', href: '/#!projects'/*, sub: [
+        { label: 'web', href: '/#!projects/web' },
+        { label: 'other', href: '/#!projects/other' }
+      ]*/},
+      { label: 'contact', href: '/#!contact' }
+    ]
 
-    auth.on('logged-in', function(r){
-      self.update({
-        main_view: 'home-view',
-        nav_view: 'nav-user'
-      })
-    })
-
-    auth.on('logged-out', function(r){
-      self.update({
-        main_view: 'login-form',
-        nav_view: 'nav-public'
-      })
-    })
+    route.stop()
+    route.start(true)
+    route.base('#!')
+    route(              function(){ self.update({content: 'a-404-index'}) })
+    route('/(|home)',      function(){ self.update({content: 'a-home-index'}) })
+    route('/projects/web',   function(){ self.update({content: 'a-projects-web'}) })
+    route('/projects/other',   function(){ self.update({content: 'a-projects-other'}) })
+    route('/projects',   function(){ self.update({content: 'a-projects-index'}) })
+    route('/contact',   function(){ self.update({content: 'a-contact-index'}) })
   </script>
-</app>
+</a-app>

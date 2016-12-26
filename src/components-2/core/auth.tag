@@ -14,7 +14,7 @@ auth.login = function(username, password, token){
   var sha = new jsSHA("SHA-512", "TEXT")
   sha.update(username + password + token)
   var hash = sha.getHash('B64')
-  
+
   aja()
     .method('post')
     .url('/api/login')
