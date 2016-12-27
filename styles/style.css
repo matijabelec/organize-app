@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6{
   top: 50%;
   left: 50%;
   margin: 0;
-  padding: 16px;
+  padding: 48px 16px 16px;
   width: 520px;
   max-width: 90%;
   -webkit-transform: translate(-50%, -50%);
@@ -201,6 +201,16 @@ h1,h2,h3,h4,h5,h6{
   word-wrap: normal;
   width: 26px;
   text-align: center;
+}
+
+.e-card .e-menu-top-right{
+  display: block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 @media all and (min-width: 461px){
