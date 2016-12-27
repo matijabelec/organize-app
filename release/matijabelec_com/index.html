@@ -159,17 +159,17 @@
 				<div id="e-ext-contact" class="e-content e-ext-content">
 					<h3>Contact</h3>
 
-					<div><i class="ion-icons ion-android-call"></i> +385 98 966 9983</div>
+					<div><i class="ion-icons ion-android-call"></i> <span>+385 98 966 9983</span></div>
 					<div><i class="ion-icons ion-email"></i> <a href="mailto:matijabelec1@gmail.com">matijabelec1@gmail.com</a></div>
-					<div><i class="ion-icons ion-social-skype"></i> matijabelec</div>
+					<div><i class="ion-icons ion-social-skype"></i> <span>matijabelec</span></div>
 
 					<div class="e-act-close"><i class="ion-icons ion-android-close"></i></div>
 				</div>
 			</div>
 
 			<div class="e-menu-top-right">
-				<a href="https://linkedin.com/in/matijabelec" target="_blank"><i class="ion-icons ion-social-linkedin"></i></a>
-				<a href="https://github.com/matijabelec" target="_blank"><i class="ion-icons ion-social-github"></i></a>
+				<a class="e-menu-item" href="https://linkedin.com/in/matijabelec" target="_blank"><i class="ion-icons ion-social-linkedin"></i></a>
+				<a class="e-menu-item" href="https://github.com/matijabelec" target="_blank"><i class="ion-icons ion-social-github"></i></a>
 			</div>
 		</div>
 
@@ -187,6 +187,8 @@
 			for(var i=0; i<eActExts.length; i++){
 				eActExts[i].addEventListener('click', function(e){
 					for(var i=0; i<eExtContents.length; i++){fw.removeClass(eExtContents[i], 'show');}
+					for(var i=0; i<eActExts.length; i++){fw.removeClass(eActExts[i], 'selected');}
+					fw.addClass(this, 'selected');
 					fw.addClass(document.getElementById(this.getAttribute('data-for')), 'show');
 					fw.addClass(eCard, 'top');
 				});
@@ -196,6 +198,7 @@
 				eActClose.addEventListener('click', function(){
 					fw.removeClass(eCard, 'top');
 					for(var i=0; i<eExtContents.length; i++){fw.removeClass(eExtContents[i], 'show');}
+					for(var i=0; i<eActExts.length; i++){fw.removeClass(eActExts[i], 'selected');}
 				});
 			}
 		</script>
