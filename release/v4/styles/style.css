@@ -22,13 +22,13 @@ h1,h2,h3,h4,h5,h6{
 
 .e-card{
   display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: 16px auto;
+  margin: 0;
   padding: 48px 16px 16px;
   width: 520px;
   max-width: 90%;
@@ -53,22 +53,6 @@ h1,h2,h3,h4,h5,h6{
               0 9px 1px -3px rgba(0, 0, 0, 0.2),
               0 16px 0 -6px #f6f6f6,
               0 17px 2px -6px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-}
-
-.e-card.top{
-  top: 16px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  -webkit-transform: translate(0%, 0%);
-  -moz-transform: translate(0%, 0%);
-  -o-transform: translate(0%, 0%);
-  -ms-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
 }
 
 .e-card .e-matija{
@@ -114,7 +98,6 @@ h1,h2,h3,h4,h5,h6{
   display: inline-block;
   margin: 0;
   color: #ff9505;
-  cursor: pointer;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -135,13 +118,13 @@ h1,h2,h3,h4,h5,h6{
 .e-actions .e-action:hover .e-action-desc{
   color: #cf6505;
 }
-.e-card .e-content{
+.e-actions .e-action .e-content{
   display: block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 16px);
   left: 0;
   right: 0;
   padding: 16px 16px 72px;
@@ -171,30 +154,18 @@ h1,h2,h3,h4,h5,h6{
   transition: all 0.4s ease;
   text-align: left;
 }
-.e-card .e-content.show{
+.e-actions .e-action:hover .e-content{
   max-height: 4000px;
   opacity: 1;
-}
-.e-content h3{
-  font-size: 16pt;
-  margin: 8px 0 16px;
-}
-
-.e-content .e-act-close{
-  display: block;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
 }
 
 .e-content .e-education-card + .e-education-card{
   margin-top: 24px;
 }
-.e-content .e-education-card h4{
+.e-content .e-education-card h3{
   font-size: 14pt;
 }
-.e-content .e-education-card h5{
+.e-content .e-education-card h4{
   font-size: 12pt;
   margin: 4px 0 0;
 }
@@ -206,10 +177,10 @@ h1,h2,h3,h4,h5,h6{
 .e-content .e-experience-card + .e-experience-card{
   margin-top: 24px;
 }
-.e-content .e-experience-card h4{
+.e-content .e-experience-card h3{
   font-size: 14pt;
 }
-.e-content .e-experience-card h5{
+.e-content .e-experience-card h4{
   font-size: 12pt;
   margin: 4px 0 0;
 }
@@ -241,12 +212,6 @@ h1,h2,h3,h4,h5,h6{
   top: 16px;
   right: 16px;
 }
-
-/*.e-act-ext:hover{
-  -webkit-box-shadow: 0 1px 4px 0px #444;
-  -moz-box-shadow: 0 1px 4px 0px #444;
-  box-shadow: 0 1px 4px 0px #444;
-}*/
 
 @media all and (min-width: 461px){
   .e-card .e-matija, .e-card .e-card-header{
