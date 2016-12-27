@@ -9,7 +9,7 @@ body{
   position: relative;
   margin: 0;
   padding: 16px 0;
-  background: #f5f5f5 none repeat scroll 0 0;
+  background: #dadada none repeat scroll 0 0;
   min-height: 450px;
 }
 a{
@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6{
   top: 50%;
   left: 50%;
   margin: 16px auto;
-  padding: 48px 16px 16px;
+  padding: 64px 16px 16px;
   width: 520px;
   max-width: 90%;
   -webkit-transform: translate(-50%, -50%);
@@ -60,15 +60,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .e-card.top{
-  top: 16px;
-  left: 0px;
-  right: 0px;
-  width: 100%;
-  -webkit-transform: translate(0%, 0%);
-  -moz-transform: translate(0%, 0%);
-  -o-transform: translate(0%, 0%);
-  -ms-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
+  width: 1120px;
 }
 
 .e-card .e-matija{
@@ -81,6 +73,9 @@ h1,h2,h3,h4,h5,h6{
   height: 140px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .e-card .e-card-header{
@@ -115,6 +110,7 @@ h1,h2,h3,h4,h5,h6{
   margin: 0;
   color: #ff9505;
   cursor: pointer;
+  position: relative;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -130,9 +126,17 @@ h1,h2,h3,h4,h5,h6{
 .e-actions .e-action .e-action-desc{
   display: none;
   vertical-align: middle;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 8px;
+  background: #333 none repeat scroll 0 0;
+  color: #ddd;
 }
-.e-actions .e-action:hover i,
 .e-actions .e-action:hover .e-action-desc{
+  display: block;
+}
+.e-actions .e-action:hover i, .e-actions .e-action.selected i{
   color: #cf6505;
 }
 .e-card .e-content{
@@ -148,6 +152,7 @@ h1,h2,h3,h4,h5,h6{
   margin: 0;
   opacity: 0;
   background: #fff none repeat scroll 0 0;
+  border-top: 1px solid #e3e3e3;
   -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2),
                       0 8px 0 -3px #f6f6f6,
                       0 9px 1px -3px rgba(0, 0, 0, 0.2),
@@ -170,6 +175,7 @@ h1,h2,h3,h4,h5,h6{
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   text-align: left;
+  color: #222;
 }
 .e-card .e-content.show{
   max-height: 4000px;
@@ -178,6 +184,7 @@ h1,h2,h3,h4,h5,h6{
 .e-content h3{
   font-size: 16pt;
   margin: 8px 0 16px;
+  color: #ff9505;
 }
 
 .e-content .e-act-close{
@@ -193,14 +200,17 @@ h1,h2,h3,h4,h5,h6{
 }
 .e-content .e-education-card h4{
   font-size: 14pt;
+  color: #222;
 }
 .e-content .e-education-card h5{
   font-size: 12pt;
   margin: 4px 0 0;
+  color: #555;
 }
 .e-content .e-education-card p{
   font-size: 12pt;
   margin: 8px 0 0;
+  color: #222;
 }
 
 .e-content .e-experience-card + .e-experience-card{
@@ -208,14 +218,17 @@ h1,h2,h3,h4,h5,h6{
 }
 .e-content .e-experience-card h4{
   font-size: 14pt;
+  color: #222;
 }
 .e-content .e-experience-card h5{
   font-size: 12pt;
   margin: 4px 0 0;
+  color: #555;
 }
 .e-content .e-experience-card p{
   font-size: 12pt;
   margin: 8px 0 0;
+  color: #222;
 }
 
 .ion-icons{
@@ -228,8 +241,11 @@ h1,h2,h3,h4,h5,h6{
   text-transform: none;
   white-space: nowrap;
   word-wrap: normal;
-  width: 26px;
   text-align: center;
+}
+
+.e-card .e-actions .ion-icons{
+  font-size: 36px;
 }
 
 .e-card .e-menu-top-right{
@@ -240,6 +256,22 @@ h1,h2,h3,h4,h5,h6{
   position: absolute;
   top: 16px;
   right: 16px;
+}
+.e-card .e-menu-top-right .e-menu-item{
+  display: inline-block;
+}
+.e-card .e-menu-top-right .e-menu-item + .e-menu-item{
+  margin-left: 8px;
+}
+.e-card .e-menu-top-right .ion-icons{
+  font-size: 48px;
+}
+
+.e-content.e-ext-content div + div{
+  margin-top: 8px;
+}
+.e-content.e-ext-content .ion-icons{
+  margin-right: 8px;
 }
 
 /*.e-act-ext:hover{
@@ -258,9 +290,5 @@ h1,h2,h3,h4,h5,h6{
   }
   .e-card .e-card-header{
     max-width: 60%;
-  }
-
-  .e-actions .e-action .e-action-desc{
-    display: inline-block;
   }
 }
