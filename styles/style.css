@@ -61,6 +61,12 @@ h1,h2,h3,h4,h5,h6{
 
 .e-card.top{
   width: 1120px;
+  top: 0%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 
 .e-card .e-matija{
@@ -175,11 +181,19 @@ h1,h2,h3,h4,h5,h6{
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   text-align: left;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
   color: #222;
 }
 .e-card .e-content.show{
   max-height: 4000px;
   opacity: 1;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 .e-content h3{
   font-size: 16pt;
