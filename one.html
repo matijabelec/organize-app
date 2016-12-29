@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Welcome to Matija Belec's personal website.">
 		<title>Matija Belec</title>
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -21,7 +22,7 @@
 		</script>
 	</head>
 	<body>
-		<div id="e-card-main" class="e-card">
+		<article id="e-card-main" class="e-card">
 			<div class="e-matija">
 				<img src="/files/images/matija.jpg" alt="matija">
 			</div>
@@ -34,26 +35,34 @@
 			</div>
 
 			<ul class="e-actions">
-				<li class="e-action e-act-ext" data-for="e-ext-education">
-					<i class="ion-icons ion-university"></i>
-					<span class="e-action-desc">education</span>
+				<li class="e-action e-act-ext" data-for="e-ext-education" id="e-act-ext-education">
+					<a href="#education">
+						<i class="ion-icons ion-university"></i>
+						<span class="e-action-desc">education</span>
+					</a>
 				</li>
-				<li class="e-action e-act-ext" data-for="e-ext-skills">
-					<i class="ion-icons ion-podium"></i>
-					<span class="e-action-desc">skills</span>
+				<li class="e-action e-act-ext" data-for="e-ext-skills" id="e-act-ext-skills">
+					<a href="#skills">
+						<i class="ion-icons ion-podium"></i>
+						<span class="e-action-desc">skills</span>
+					</a>
 				</li>
-				<li class="e-action e-act-ext" data-for="e-ext-experience">
-					<i class="ion-icons ion-flash"></i>
-					<span class="e-action-desc">experience</span>
+				<li class="e-action e-act-ext" data-for="e-ext-experience" id="e-act-ext-experience">
+					<a href="#experience">
+						<i class="ion-icons ion-flash"></i>
+						<span class="e-action-desc">experience</span>
+					</a>
 				</li>
-				<li class="e-action e-act-ext" data-for="e-ext-contact">
-					<i class="ion-icons ion-email"></i>
-					<span class="e-action-desc">contact</span>
+				<li class="e-action e-act-ext" data-for="e-ext-contact" id="e-act-ext-contact">
+					<a href="#contact">
+						<i class="ion-icons ion-email"></i>
+						<span class="e-action-desc">contact</span>
+					</a>
 				</li>
 			</ul>
 
 			<div>
-				<div id="e-ext-education" class="e-content e-ext-content">
+				<section id="e-ext-education" class="e-content e-ext-content">
 					<h3>Education</h3>
 
 					<section class="e-education-card">
@@ -69,9 +78,9 @@
 					</section>
 
 					<div class="e-act-close"><i class="ion-icons ion-android-close"></i></div>
-				</div>
+				</section>
 
-				<div id="e-ext-skills" class="e-content e-ext-content">
+				<section id="e-ext-skills" class="e-content e-ext-content">
 					<h3>Skills</h3>
 
 					<ul class="e-skills-list">
@@ -113,9 +122,9 @@
 					</ul>
 
 					<div class="e-act-close"><i class="ion-icons ion-android-close"></i></div>
-				</div>
+				</section>
 
-				<div id="e-ext-experience" class="e-content e-ext-content">
+				<section id="e-ext-experience" class="e-content e-ext-content">
 					<h3>Experience</h3>
 
 					<section class="e-experience-card">
@@ -154,9 +163,9 @@
 					</section>
 
 					<div class="e-act-close"><i class="ion-icons ion-android-close"></i></div>
-				</div>
+				</section>
 
-				<div id="e-ext-contact" class="e-content e-ext-content">
+				<section id="e-ext-contact" class="e-content e-ext-content">
 					<h3>Contact</h3>
 
 					<div><i class="ion-icons ion-android-call"></i> <span>+385 98 966 9983</span></div>
@@ -164,14 +173,15 @@
 					<div><i class="ion-icons ion-social-skype"></i> <span>matijabelec</span></div>
 
 					<div class="e-act-close"><i class="ion-icons ion-android-close"></i></div>
-				</div>
+				</section>
 			</div>
 
 			<div class="e-menu-top-right">
 				<a class="e-menu-item" href="https://linkedin.com/in/matijabelec" target="_blank"><i class="ion-icons ion-social-linkedin"></i></a>
+				<a class="e-menu-item" rel="author" href="https://plus.google.com/+MatijaBelec" target="_blank"><i class="ion-icons ion-social-googleplus"></i></a>
 				<a class="e-menu-item" href="https://github.com/matijabelec" target="_blank"><i class="ion-icons ion-social-github"></i></a>
 			</div>
-		</div>
+		</article>
 
 		<script>
 			var fw={
@@ -200,6 +210,16 @@
 					for(var i=0; i<eExtContents.length; i++){fw.removeClass(eExtContents[i], 'show');}
 					for(var i=0; i<eActExts.length; i++){fw.removeClass(eActExts[i], 'selected');}
 				});
+			}
+
+			var defLocation = window.location.hash;
+			if(defLocation && defLocation.length>1){
+				var eDefault = document.getElementById('e-act-ext-' + defLocation.substr(1));
+				if(eDefault){
+					setTimeout(function(){
+						eDefault.click();
+					}, 600);
+				}
 			}
 		</script>
 	</body>
