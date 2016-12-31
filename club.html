@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Welcome to Belec club website - world of mini and micro websites that are innovative and effective.">
+		<title>Belec Club</title>
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+		<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="/styles/normalize.css">
+		<link rel="stylesheet" href="/styles/belec-club.css">
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-89505089-2', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<article id="e-main-article" class="e-article">
+			<header class="e-article-header">
+				<h1>Belec Club</h1>
+				<p>World of mini and micro websites that are innovative and effective.</p>
+			</header>
+
+			<section>
+				<h2>Under construction!</h2>
+				<p>Website is under construction.</p>
+			</section>
+
+			<section class="e-bc-family">
+				<h2>Belec club family sites list</h2>
+				<ul>
+					<li><a href="http://matijabelec.com" target="_blank">matijabelec.com</a></li>
+					<li>...</li>
+				</ul>
+			</section>
+
+			<!-- <section class="e-family-section">
+				<h2>Belec club family</h2>
+				<div class="e-projects">
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+
+					<div class="e-project">
+						<h3>matija belec</h3>
+						<div class="e-tags">
+							<span class="e-tag">HTML5</span>
+							<span class="e-tag">CSS3</span>
+							<span class="e-tag">JavaScript</span>
+						</div>
+						<p>Personal website.</p>
+						<a href="http://matijabelec.com">Open</a>
+					</div>
+				</div>
+			</section> -->
+		</article>
+
+		<script>
+			var fw={
+				hasClass: function(e, c){return Boolean(e.className && e.className.match(new RegExp("( |^)" + c + "( |$)")));},
+				addClass: function(e, c){if(!this.hasClass(e, c)) e.className = (e.className && e.className.length>0 ? e.className + ' ' : '') + c;},
+				removeClass: function(e, c){e.className = e.className.replace(new RegExp('( |^)' + c + '( |$)'), '');},
+				toggleClass: function(e, c){if(!this.hasClass(e, c)) this.addClass(e, c); else this.removeClass(e, c);}
+			}
+
+			var eCard = document.getElementById('e-card-main');
+			var eActExts = document.getElementsByClassName('e-act-ext');
+			var eExtContents = document.getElementsByClassName('e-ext-content');
+			for(var i=0; i<eActExts.length; i++){
+				eActExts[i].addEventListener('click', function(e){
+					for(var i=0; i<eExtContents.length; i++){fw.removeClass(eExtContents[i], 'show');}
+					for(var i=0; i<eActExts.length; i++){fw.removeClass(eActExts[i], 'selected');}
+					fw.addClass(this, 'selected');
+					fw.addClass(document.getElementById(this.getAttribute('data-for')), 'show');
+					fw.addClass(eCard, 'top');
+				});
+			}
+			for(var i=0; i<eExtContents.length; i++){
+				var eActClose = eExtContents[i].getElementsByClassName('e-act-close')[0];
+				eActClose.addEventListener('click', function(){
+					fw.removeClass(eCard, 'top');
+					for(var i=0; i<eExtContents.length; i++){fw.removeClass(eExtContents[i], 'show');}
+					for(var i=0; i<eActExts.length; i++){fw.removeClass(eActExts[i], 'selected');}
+				});
+			}
+		</script>
+	</body>
+</html>
