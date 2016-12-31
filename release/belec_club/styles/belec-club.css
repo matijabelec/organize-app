@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'MinstrelPosterNF';
+  src: url('/files/fonts/minstrelposterwhg/MinstrelPosterNF.ttf');
+}
+
+html, body{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+h1{ color: #1f487e; font-family: 'MinstrelPosterNF', 'Helvetica', sans-serif; font-size: 52pt; font-weight: 100; margin: 0; padding: .1em; }
+h2{ color: #1f487e; font-size: 14pt; margin: 0; padding: 1em .1em .1em; }
+p{ font-size: 12pt; margin: 0; padding: 0 .1em .2em; }
+a{ color: #3f78ae; }
+a:hover{ color: #4f88be; text-decoration: none; }
+body{
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 16px 0;
+  background: #eee5e5 none repeat scroll 0 0;
+  min-height: 450px;
+  text-align: center;
+}
+
+.e-article, .e-bc-family, .e-family-section .e-project{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.e-article{
+  /*background-color: #ccc;*/
+  display: inline-block;
+  margin: 120px auto 0px;
+  max-width: 480px;
+}
+
+.e-bc-family{
+  text-align: left;
+  margin-top: 40px;
+}
+.e-bc-family ul{
+  margin: .2em 0;
+}
+
+.e-family-section{
+  /*padding: 16px;*/
+}
+.e-family-section ul, .e-family-section ul li{
+  padding: 0;
+  margin: 0;
+}
+.e-family-section ul{
+  list-style: none;
+}
+.e-family-section .e-project{
+  float: left;
+  width: 33.333333%;
+  height: 280px;
+  /*border: 1px solid #333;*/
+  padding: 8px;
+}
+.e-family-section:after{
+  display: block;
+  clear: both;
+  content: '';
+}
